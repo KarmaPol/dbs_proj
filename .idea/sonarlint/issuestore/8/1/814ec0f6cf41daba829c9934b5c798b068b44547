@@ -1,0 +1,13 @@
+
+u	java:S116	"TRename this field "FILE_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›õ÷øøÿÿÿÿ8Ñÿ˜¬è1
+x	java:S116
+"WRename this field "BLOCK_FACTOR" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãð»¶ÿÿÿÿÿ8Òÿ˜¬è1
+C
+java:S1170	"!Make this final field static too.(›õ÷øøÿÿÿÿ8Òÿ˜¬è1
+C
+java:S1170
+"!Make this final field static too.(ãð»¶ÿÿÿÿÿ8Òÿ˜¬è1
+W
+java:S6213":Rename this variable to not match a restricted identifier.(Ø¢öã8Ôÿ˜¬è1
+J
+java:S1144"-Remove this unused private "readFile" method.(Äáú·8Öÿ˜¬è1

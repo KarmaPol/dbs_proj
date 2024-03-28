@@ -1,0 +1,13 @@
+
+u	java:S116"TRename this field "FILE_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›õ÷øøÿÿÿÿ8ÀŒ«è1
+p	java:S116"TRename this field "FILE_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€€÷8ÁŒ«è1
+C
+java:S1170"!Make this final field static too.(›õ÷øøÿÿÿÿ8ÁŒ«è1
+p
+java:S1450"SRemove the "file" field and declare it as a local variable in the relevant methods.(ïÛú8ÃŒ«è1
+L	java:S106"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8ÎŒ«è1
+E
+java:S1068"(Remove this unused "file" private field.(ïÛú8ÏŒ«è1
+Q
+java:S1144
+"/Remove this unused private "createFile" method.(ÆÌÚüÿÿÿÿ8ÏŒ«è1
