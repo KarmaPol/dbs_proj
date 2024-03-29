@@ -5,11 +5,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import dbs.metadataHandler.vo.TableMetadataVO;
+
 public class RecordReader {
 	private static final int BLOCK_FACTOR = 3;
 
-	private static List<String> readFile(String fileName, int recordSize) {
+	public static List<String> readFile(TableMetadataVO tableMetadataVO) {
+		String fileName = tableMetadataVO.name();
+		int recordSize = tableMetadataVO.recordSize();
 		String filePath = fileName + ".txt";
+
 		List<String> records = new ArrayList<>();
 		try (FileReader fileReader = new FileReader(filePath)) {
 			char[] characters = new char[recordSize* BLOCK_FACTOR];

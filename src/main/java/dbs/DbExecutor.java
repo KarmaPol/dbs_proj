@@ -9,6 +9,7 @@ import net.sf.jsqlparser.statement.insert.Insert;
 import net.sf.jsqlparser.statement.select.PlainSelect;
 
 import dbs.queryExecutor.InsertExecutor;
+import dbs.queryExecutor.SelectExecutor;
 import dbs.queryExecutor.TableCreator;
 
 public class DbExecutor {
@@ -20,6 +21,7 @@ public class DbExecutor {
 	public static void main(String[] args) throws JSQLParserException {
 		TableCreator tableCreator = new TableCreator();
 		InsertExecutor insertExecutor = new InsertExecutor();
+		SelectExecutor selectExecutor = new SelectExecutor();
 
 		Scanner sc = new Scanner(System.in);
 		while(true) {
@@ -36,7 +38,7 @@ public class DbExecutor {
 			}
 			else if(input.matches(SELECT_PATTERN)) {
 				PlainSelect select = (PlainSelect)CCJSqlParserUtil.parse(input);
-
+				selectExecutor.selectRecords(select);
 			}
 			else if(input.matches(INSERT_PATTERN)) {
 				Insert sql = (Insert)CCJSqlParserUtil.parse(input);

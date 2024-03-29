@@ -1,4 +1,7 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ÂŠÕ„8 éŒÈè1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë8µ«äÑè1
+o
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8ˆèòÑè1
+\
+java:S6213":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8›€éÑè1
+G	java:S106'"+Replace this use of System.out by a logger.(‚Û‰†8åñÑè1

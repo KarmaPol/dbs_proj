@@ -1,13 +1,12 @@
 package dbs.queryExecutor;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
-import net.sf.jsqlparser.expression.operators.relational.ExpressionList;
 import net.sf.jsqlparser.statement.insert.Insert;
-import net.sf.jsqlparser.statement.select.PlainSelect;
-import net.sf.jsqlparser.statement.select.Select;
 
 import dbs.metadataHandler.MetadataHandler;
 import dbs.metadataHandler.vo.AttributeMetadataVO;
@@ -26,28 +25,28 @@ public class InsertExecutor {
 			.collect(Collectors.toList());
 
 		TableMetadataVO tableMetaData = MetadataHandler.getTableMetaData(tableName);
-		List<AttributeMetadataVO> attributeMetadatas = MetadataHandler.getAttributeMetadata(tableName);
+		Map<String, AttributeMetadataVO> attributeMetadataVOMap = MetadataHandler.getAttributeMetadata(tableName);
 
+		List<String> recordList = new ArrayList<>(Collections.nCopies(columnNames.size(), null));
 		StringBuilder recordMaker = new StringBuilder();
+
 		for(int i = 0; i < columnNames.size(); i++) {
 			String columnName = columnNames.get(i);
 			String columnValue = columnValues.get(i);
 
-			AttributeMetadataVO currentAttributeMetadata = null;
-			for(int j = 0; j < attributeMetadatas.size(); j++) {
-				if(attributeMetadatas.get(i).name().equals(columnName)) {
-					currentAttributeMetadata = attributeMetadatas.get(i);
-					break;
-				}
-			}
+			AttributeMetadataVO currentAttributeMetadata = attributeMetadataVOMap.get(columnName);
 
 			int columnSize = currentAttributeMetadata.size();
 			String columnType = currentAttributeMetadata.type();
+			int columnIdx = currentAttributeMetadata.columnIdx();
 
 			String emptyRecord = new String(new char[columnSize]);
 			String currentValue = (columnValue + emptyRecord).substring(0, columnSize);
+			recordList.set(columnIdx, currentValue);
 			recordMaker.append(currentValue);
 		}
+
+		// TODO recordList 풀어서 String으로 만들어 준뒤 RecordWriter.writeRecord(record, tableMetaData) 호출 -> idx 정보가 안들어 있음
 		String currentRecord = recordMaker.toString();
 		RecordWriter.writeRecord(currentRecord, tableMetaData);
 	}

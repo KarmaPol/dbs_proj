@@ -7,13 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
-import org.w3c.dom.Attr;
+import java.util.Map;
 
 import dbs.metadataHandler.vo.AttributeMetadataVO;
 import dbs.metadataHandler.vo.TableMetadataVO;
-import dbs.queryExecutor.TableCreator;
 
 public class MetadataHandler {
 	private static final String url = "jdbc:mysql://localhost:3307/metadata_db"; // yourDatabaseName을 데이터베이스 이름으로 변경하세요.
@@ -54,6 +53,7 @@ public class MetadataHandler {
 			"column_name VARCHAR(255) NOT NULL, " +
 			"data_type VARCHAR(255) NOT NULL, " +
 			"column_size INT, " +
+			"column_idx INT, " +
 			"table_name VARCHAR(255) NOT NULL" +
 			")";
 
@@ -116,10 +116,11 @@ public class MetadataHandler {
 		return new TableMetadataVO(tableName, 0, "");
 	}
 
-	public static List<AttributeMetadataVO> getAttributeMetadata(String tableName) {
-		String query = "SELECT column_name, data_type, column_size FROM column_metadata WHERE TABLE_NAME = ?";
+	public static Map<String, AttributeMetadataVO> getAttributeMetadata(String tableName) {
+		String query = "SELECT column_name, data_type, column_size, column_idx FROM column_metadata WHERE TABLE_NAME = ?";
 
 		List<AttributeMetadataVO> attributeMetadatas = new ArrayList<>();
+		Map<String, AttributeMetadataVO> attributeMetadataVOMap = new HashMap<>();
 
 		try (Connection conn = DriverManager.getConnection(url, user, password);
 			 PreparedStatement pstmt = conn.prepareStatement(query)) {
@@ -131,17 +132,16 @@ public class MetadataHandler {
 					String columnName = rs.getString("column_name");
 					String dataType = rs.getString("data_type");
 					int columnSize = rs.getInt("column_size");
+					int columnIdx = rs.getInt("column_idx");
 
-
-					AttributeMetadataVO vo = new AttributeMetadataVO(columnName, dataType, columnSize,
-						tableName);
-					attributeMetadatas.add(vo);
+					AttributeMetadataVO vo = new AttributeMetadataVO(columnName, dataType, columnSize, columnIdx, tableName);
+					attributeMetadataVOMap.put(columnName, vo);
 				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
-		return attributeMetadatas;
+		return attributeMetadataVOMap;
 	}
 }

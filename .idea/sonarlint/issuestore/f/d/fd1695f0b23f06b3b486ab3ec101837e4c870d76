@@ -1,7 +1,5 @@
 
-a	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8•Ç±Îè1
+a	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8•Ç±Îè1
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë8˜Ç±Îè1
-L	java:S1065"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8 Ç±Îè1
-c	java:S899;"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8¡Ç±Îè1
-h
-java:S1128	"KRemove this unused import 'net.sf.jsqlparser.statement.create.table.Index'.(³¿´•8ººäÎè1
+L	java:S1067"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8 Ç±Îè1
+c	java:S899="BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8¡Ç±Îè1

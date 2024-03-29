@@ -1,24 +1,22 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(üÓÖº8§¾¶Îè1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿€ÅŸúÿÿÿÿ8²¾¶Îè1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıëİúÿÿÿÿ8²¾¶Îè1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÍÍÿÿÿÿÿ8²¾¶Îè1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(üÓÖº8§­„Ñè1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿€ÅŸúÿÿÿÿ8¬­„Ñè1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıëİúÿÿÿÿ8­­„Ñè1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÍÍÿÿÿÿÿ8­­„Ñè1
 \
-java:S1118":Add a private constructor to hide the implicit public one.(ÔŠÀ“úÿÿÿÿ8¶¾¶Îè1
+java:S1118":Add a private constructor to hide the implicit public one.(ÔŠÀ“úÿÿÿÿ8®­„Ñè1
 X
-java:S6437"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¸¾¶Îè1
-L	java:S106%"+Replace this use of System.out by a logger.(õ½¾şûÿÿÿÿ8¹¾¶Îè1
-L	java:S106*"+Replace this use of System.out by a logger.(å¾”âşÿÿÿÿ8¹¾¶Îè1
+java:S6437"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¯­„Ñè1
+L	java:S106$"+Replace this use of System.out by a logger.(õ½¾şûÿÿÿÿ8°­„Ñè1
+L	java:S106)"+Replace this use of System.out by a logger.(å¾”âşÿÿÿÿ8°­„Ñè1
 X
-java:S6437<"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8º¾¶Îè1
-G	java:S106A"+Replace this use of System.out by a logger.(Ÿ‡’¼8º¾¶Îè1
+java:S6437<"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8±­„Ñè1
+G	java:S106A"+Replace this use of System.out by a logger.(Ÿ‡’¼8²­„Ñè1
 X
-java:S6437J"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¼¾¶Îè1
+java:S6437J"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8»­„Ñè1
 X
-java:S6437d"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8½¾¶Îè1
+java:S6437d"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¼­„Ñè1
+T
+java:S1481z"7Remove this unused "attributeMetadatas" local variable.(Î¨ç»8½­„Ñè1
 X
-java:S6437|"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8¾¾¶Îè1
-J
-java:S1128"-Remove this unused import 'org.w3c.dom.Attr'.(öÇ£Ğ8ŒÖ¹Îè1
-X
-java:S1128";Remove this unused import 'dbs.queryExecutor.TableCreator'.(êƒ“­8ŒÖ¹Îè1
+java:S6437}"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8¾­„Ñè1
