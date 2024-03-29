@@ -1,14 +1,10 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë8ÙÎÓ«è1
-u	java:S116"TRename this field "FILE_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›õ÷øøÿÿÿÿ8ÛÎÓ«è1
+a	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8’±ÂÌè1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë8”±ÂÌè1
+u	java:S116"TRename this field "FILE_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ—Öëøÿÿÿÿ8–±ÂÌè1
 C
-java:S1170"!Make this final field static too.(›õ÷øøÿÿÿÿ8ÜÎÓ«è1
+java:S1170"!Make this final field static too.(Ğ—Öëøÿÿÿÿ8–±ÂÌè1
 £
-java:S1186	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÛğŠÕûÿÿÿÿ8ÜÎÓ«è1
-p
-java:S1450"SRemove the "file" field and declare it as a local variable in the relevant methods.(ïÛú8ÜÎÓ«è1
-L	java:S106"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8àÎÓ«è1
-E
-java:S1068"(Remove this unused "file" private field.(ïÛú8àÎÓ«è1
-L
-java:S1144"/Remove this unused private "createFile" method.(ÑóøÃ8àÎÓ«è1
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÛğŠÕûÿÿÿÿ8–±ÂÌè1
+L	java:S1065"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8œ±ÂÌè1
+c	java:S899;"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8œ±ÂÌè1

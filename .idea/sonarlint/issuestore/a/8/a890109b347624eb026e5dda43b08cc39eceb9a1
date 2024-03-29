@@ -1,3 +1,28 @@
 
+\
+java:S1854%":Remove this useless assignment to local variable "select".(¯äĞÅøÿÿÿÿ8µ³Éè1
+L	java:S106"+Replace this use of System.out by a logger.(î‡ó©ùÿÿÿÿ8¸³Éè1
+n
+java:S5998"LRefactor this repetition that can lead to a stack overflow for large inputs.(œÔ†‘øÿÿÿÿ8¹³Éè1
+e
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(œÔ†‘øÿÿÿÿ8¹³Éè1
+e
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(œÔ†‘øÿÿÿÿ8¹³Éè1
+e
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(üˆ…ƒùÿÿÿÿ8º³Éè1
 M
-java:S1068"0Remove this unused "tableCreator" private field.(Äñç°8ÆÁ“¬è1
+java:S1481%"+Remove this unused "select" local variable.(¯äĞÅøÿÿÿÿ8»³Éè1
+`
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8»³Éè1
+`
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8»³Éè1
+`
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8»³Éè1
+J	java:S108'")Either remove or fill this block of code.(ğª¡¨ÿÿÿÿÿ8»³Éè1
+L	java:S106+"+Replace this use of System.out by a logger.(¢£›»üÿÿÿÿ8»³Éè1
+d
+java:S1128"BRemove this unused import 'net.sf.jsqlparser.parser.CCJSqlParser'.(˜‹…äøÿÿÿÿ8ÎÒ€Êè1
+d
+java:S1128"BRemove this unused import 'net.sf.jsqlparser.statement.Statement'.(âÆÍ–ıÿÿÿÿ8ÎÒ€Êè1
+O
+java:S1128"2Remove this unused import 'dbs.util.RecordReader'.(†è©—8ÎÒ€Êè1

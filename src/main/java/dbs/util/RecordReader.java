@@ -10,7 +10,7 @@ public class RecordReader {
 	private final int BLOCK_FACTOR = 3;
 
 	private List<String> readFile(String fileName, int recordSize) {
-		String filePath = FILE_PATH + fileName + ".csv";
+		String filePath = FILE_PATH + fileName + ".txt";
 		List<String> records = new ArrayList<>();
 		try (FileReader fileReader = new FileReader(filePath)) {
 			char[] characters = new char[recordSize* BLOCK_FACTOR];
