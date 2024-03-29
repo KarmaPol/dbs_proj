@@ -23,6 +23,10 @@ public class MetadataHandler {
 		try (Connection conn = DriverManager.getConnection(url, user, password)) {
 			// Statement 객체 생성
 			try (Statement stmt = conn.createStatement()) {
+
+				String dropTableSql = "DROP TABLE IF EXISTS table_metadata;";
+				stmt.executeUpdate(dropTableSql);
+
 				// 테이블 생성 SQL 쿼리
 				String createTableSql = "CREATE TABLE IF NOT EXISTS table_metadata (" +
 					"id INT AUTO_INCREMENT PRIMARY KEY, " +
@@ -42,7 +46,9 @@ public class MetadataHandler {
 		}
 	}
 
-	public static void createAttributeMetadata(AttributeMetadataVO vo) {
+	public static void createAttributeMetadata() {
+		String dropTableSql = "DROP TABLE IF EXISTS column_metadata;";
+
 		String createTableSql = "CREATE TABLE IF NOT EXISTS column_metadata (" +
 			"id INT AUTO_INCREMENT PRIMARY KEY, " +
 			"column_name VARCHAR(255) NOT NULL, " +
@@ -53,26 +59,40 @@ public class MetadataHandler {
 
 		try (Connection conn = DriverManager.getConnection(url, user, password);
 			 Statement stmt = conn.createStatement()) {
+			stmt.executeUpdate(dropTableSql);
+
 			stmt.executeUpdate(createTableSql);
 			System.out.println("column_metadata 테이블이 성공적으로 생성되었습니다.");
-
-			insertColumnMetadata(conn, vo);
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	private static void insertColumnMetadata(Connection conn, AttributeMetadataVO vo) throws SQLException {
+	public static void insertColumnMetadata(List<AttributeMetadataVO> vos) throws SQLException {
 		String insertSql = "INSERT INTO column_metadata (column_name, data_type, column_size, table_name) VALUES (?, ?, ?, ?)";
 
-		try (PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
-			pstmt.setString(1, vo.name());
-			pstmt.setString(2, vo.type());
-			pstmt.setInt(3, vo.size());
-			pstmt.setString(4, vo.tableName());
+		try (Connection conn = DriverManager.getConnection(url, user, password)) {
+			try (PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
+				// VO(Value Object) 리스트를 반복 처리
+				vos.forEach(vo -> {
+					try {
+						pstmt.setString(1, vo.name());
+						pstmt.setString(2, vo.type());
+						pstmt.setInt(3, vo.size());
+						pstmt.setString(4, vo.tableName());
 
-			pstmt.executeUpdate();
+						// 배치에 현재 설정된 파라미터를 추가
+						pstmt.addBatch();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				});
+
+				// 모든 VO에 대해 설정된 배치를 한 번에 실행
+				pstmt.executeBatch();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 

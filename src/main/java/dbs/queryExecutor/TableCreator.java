@@ -2,6 +2,8 @@ package dbs.queryExecutor;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import net.sf.jsqlparser.statement.create.table.CreateTable;
 import net.sf.jsqlparser.statement.create.table.Index;
@@ -25,6 +27,7 @@ public class TableCreator {
 			isFileExists();
 
 			String primaryKey = createSql.getIndexes().get(0).getColumns().get(0).toString();
+			List<AttributeMetadataVO> attributeMetadatas = new ArrayList<>();
 
 			createSql.getColumnDefinitions().forEach(column -> {
 				String columnName = column.getColumnName();
@@ -44,11 +47,12 @@ public class TableCreator {
 
 				AttributeMetadataVO attributeMetadataVO =
 					new AttributeMetadataVO(columnName, dataType, currentColumnSize, tableName);
-				MetadataHandler.createAttributeMetadata(attributeMetadataVO);
+				attributeMetadatas.add(attributeMetadataVO);
 			});
 
 			MetadataHandler.createTableMetadata(tableName, recordSize, primaryKey);
-
+			MetadataHandler.createAttributeMetadata();
+			MetadataHandler.insertColumnMetadata(attributeMetadatas);
 		} catch (Exception e) {
 			System.out.println("Error creating file: " + e.getMessage());
 		}
