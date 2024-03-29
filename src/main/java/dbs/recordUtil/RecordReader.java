@@ -1,4 +1,4 @@
-package dbs.util;
+package dbs.recordUtil;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecordReader {
-	private final String FILE_PATH = "src/main/resources/";
-	private final int BLOCK_FACTOR = 3;
+	private static final int BLOCK_FACTOR = 3;
 
-	private List<String> readFile(String fileName, int recordSize) {
-		String filePath = FILE_PATH + fileName + ".txt";
+	private static List<String> readFile(String fileName, int recordSize) {
+		String filePath = fileName + ".txt";
 		List<String> records = new ArrayList<>();
 		try (FileReader fileReader = new FileReader(filePath)) {
 			char[] characters = new char[recordSize* BLOCK_FACTOR];

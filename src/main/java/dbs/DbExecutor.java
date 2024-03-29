@@ -3,14 +3,13 @@ package dbs;
 import java.util.Scanner;
 
 import net.sf.jsqlparser.JSQLParserException;
-import net.sf.jsqlparser.parser.CCJSqlParser;
 import net.sf.jsqlparser.parser.CCJSqlParserUtil;
-import net.sf.jsqlparser.statement.Statement;
 import net.sf.jsqlparser.statement.create.table.CreateTable;
+import net.sf.jsqlparser.statement.insert.Insert;
 import net.sf.jsqlparser.statement.select.PlainSelect;
 
+import dbs.queryExecutor.InsertExecutor;
 import dbs.queryExecutor.TableCreator;
-import dbs.util.RecordReader;
 
 public class DbExecutor {
 	private static final String CREATE_PATTERN = "^CREATE TABLE [a-zA-Z0-9_]+ \\((.+\s+.+,*\s*)+(PRIMARY KEY\\s*\\([a-zA-Z0-9_]+\\))\\);$"; // CREATE TABLE 테이블명 (컬럼명1 자료형1, 컬럼명2 자료형2, ... PRIMARY KEY (컬럼명))
@@ -20,6 +19,8 @@ public class DbExecutor {
 
 	public static void main(String[] args) throws JSQLParserException {
 		TableCreator tableCreator = new TableCreator();
+		InsertExecutor insertExecutor = new InsertExecutor();
+
 		Scanner sc = new Scanner(System.in);
 		while(true) {
 			String input = sc.nextLine();
@@ -35,9 +36,11 @@ public class DbExecutor {
 			}
 			else if(input.matches(SELECT_PATTERN)) {
 				PlainSelect select = (PlainSelect)CCJSqlParserUtil.parse(input);
+
 			}
 			else if(input.matches(INSERT_PATTERN)) {
-
+				Insert sql = (Insert)CCJSqlParserUtil.parse(input);
+				insertExecutor.insertRecord(sql);
 			}
 			else {
 				System.out.println("Invalid query");

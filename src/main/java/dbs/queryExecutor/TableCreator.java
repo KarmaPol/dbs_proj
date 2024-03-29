@@ -12,18 +12,14 @@ import dbs.metadataHandler.MetadataHandler;
 import dbs.metadataHandler.vo.AttributeMetadataVO;
 
 public class TableCreator {
-	private final String FILE_PATH = "";
 	private File file;
 	private int recordSize = 0;
-
-	public TableCreator() {
-	}
 
 	public void createFile(CreateTable createSql) {
 		String tableName = createSql.getTable().getName();
 
 		try {
-			file = new File(FILE_PATH + tableName + ".txt");
+			file = new File(tableName + ".txt");
 			isFileExists();
 
 			String primaryKey = createSql.getIndexes().get(0).getColumns().get(0).toString();

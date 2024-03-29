@@ -116,7 +116,7 @@ public class MetadataHandler {
 		return new TableMetadataVO(tableName, 0, "");
 	}
 
-	public static List<AttributeMetadataVO> saveColumnMetadata(String tableName) {
+	public static List<AttributeMetadataVO> getAttributeMetadata(String tableName) {
 		String query = "SELECT column_name, data_type, column_size FROM column_metadata WHERE TABLE_NAME = ?";
 
 		List<AttributeMetadataVO> attributeMetadatas = new ArrayList<>();

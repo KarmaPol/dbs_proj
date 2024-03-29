@@ -1,4 +1,18 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ó¹Ë8ÍàÏè1
+s
+java:S2259,"VA "NullPointerException" could be thrown; "currentAttributeMetadata" is nullable here.(ˆ™Í¢8ŞßøÏè1
+[
+java:S1854-">Remove this useless assignment to local variable "columnType".(¶Ş£­8‚àÏè1
+o
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(œçÖß8ƒàÏè1
+u
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(İõÀßùÿÿÿÿ8ƒàÏè1
 d
-java:S2094"BRemove this empty class, write its code or make it an "interface".(Öê÷×ûÿÿÿÿ8º ¬è1
+java:S1612"BReplace this lambda with method reference 'Column::getColumnName'.(İõÀßùÿÿÿÿ8ƒàÏè1
+o
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8„àÏè1
+_
+java:S1612"=Replace this lambda with method reference 'Object::toString'.(Ó£şÿÿÿÿ8„àÏè1
+L
+java:S1481-"/Remove this unused "columnType" local variable.(¶Ş£­8…àÏè1

@@ -38,3 +38,9 @@ m
 =src/main/java/dbs/metadataHandler/vo/AttributeMetadataVO.java,a/3/a3840d110fd6a2235c9755827421eca79c12e27c
 i
 9src/main/java/dbs/metadataHandler/vo/TableMetadataVO.java,b/c/bc80062084bef992e7a4c283d54c388de556c406
+^
+.src/main/java/dbs/recordUtil/RecordWriter.java,3/d/3d8dd9cde268285ff171ca115cf49156dfbb5ca3
+^
+.src/main/java/dbs/recordUtil/RecordReader.java,c/f/cfaf4a542b7cc8e3afce28d898850495a5d3f302
+<
+UserInfo.txt,6/3/63557c851082ca0c1484e41567bdb1d0e9c5f13c
