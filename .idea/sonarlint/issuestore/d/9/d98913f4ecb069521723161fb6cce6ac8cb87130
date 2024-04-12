@@ -1,4 +1,13 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½J$c86ed5af-4f23-4897-b638-7e975ba44217
-}
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ƒ„wJ$7b91960f-85ac-4dae-bf39-800140327392
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8ÜÛ¢“í1J$f46d4d8b-102a-4305-ac2e-3a6a86b78e4f
+
+java:S18547">Remove this useless assignment to local variable "recordSize".(È÷„û8‰ğª“í1J$d3e70e27-d1b5-487b-85fe-79ebe037e9c1
+j
+java:S1659$"'Declare "hasDelete" on a separate line.(öğğú8ñÛ¢“í1J$84957864-d88c-4923-a94d-9a8aaefef9df
+•
+java:S6204 "RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8øÛ¢“í1J$e879a435-0fee-4199-9fdb-bec2a1dfbc07
+‚
+java:S6213%":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8ùÛ¢“í1J$a58d03f9-ead2-4251-b578-f8490506f412
+r
+java:S14817"/Remove this unused "recordSize" local variable.(È÷„û8ğª“í1J$8b68b820-f329-4348-92d4-f45c6a44ff46
+r	java:S106:"+Replace this use of System.out by a logger.(ª÷Êÿÿÿÿÿ8¼Ã£“í1J$a60ce29b-9d5b-43b4-ae4b-c66c2f638d8f

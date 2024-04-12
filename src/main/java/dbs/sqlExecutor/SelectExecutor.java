@@ -28,6 +28,10 @@ public class SelectExecutor {
 		List<String> records = RecordReader.readFile(tableMetaData);
 
 		for(String record : records) {
+			if(isDeleted(record)) {
+				continue;
+			}
+
 			int idx = 0;
 			for (AttributeMetadataVO attributeMetadata : sortedAttributeMetadatas) {
 				int size = attributeMetadata.size();
@@ -39,6 +43,10 @@ public class SelectExecutor {
 			answer.append("\n");
 		}
 		System.out.println(answer.toString());
+	}
+
+	private boolean isDeleted(String record) {
+		return record.startsWith(":free");
 	}
 
 	private String removeNullChars(String str) {

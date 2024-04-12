@@ -1,5 +1,9 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8µ«äÑè1J$2510de85-6f20-4b1c-832f-6efeb982abb5
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8†´Í‘í1J$04f18eb0-e19e-47f4-8d2a-2e51a5072db4
+•
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8’´Í‘í1J$adb3accf-5318-47db-8409-8e60081dea3b
 ‚
-java:S6213":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8›€éÑè1J$7a85f0ce-e711-4951-9dd7-7583950f365b
-m	java:S106)"+Replace this use of System.out by a logger.(‚Û‰†8åñÑè1J$fa890a25-dfe1-4cc1-b573-b039ede6149d
+java:S6213":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8“´Í‘í1J$c1721f34-b6f8-43ce-a991-da1eff5fa394
+m	java:S106-"+Replace this use of System.out by a logger.(‚Û‰†8”´Í‘í1J$7ac94212-c518-4641-9bf8-9fe4a4597930
+}
+java:S62130":Rename this variable to not match a restricted identifier.(—ÓÉ‘8‡ØÎ‘í1J$88a9aeab-4ead-41e1-ae8a-73f131d4ad51

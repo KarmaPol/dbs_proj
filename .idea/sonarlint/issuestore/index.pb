@@ -69,3 +69,9 @@ _
 /src/main/java/dbs/fileManager/RecordWriter.java,a/6/a64d92eaf7f0e664c879280eb003dc27cc58f4ed
 _
 /src/main/java/dbs/fileManager/RecordReader.java,9/6/96cf12d402be8ccb96b71a41575584f6316096e6
+m
+=src/main/java/dbs/metadataManager/vo/AttributeMetadataVO.java,2/3/232cbfb788a7e6f41a09e54ef45782a9fda092e4
+i
+9src/main/java/dbs/metadataManager/vo/TableMetadataVO.java,7/3/738a2940bec7f39fcf36276d6d4388fc10fb0799
+;
+gradlew.bat,2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3

@@ -1,4 +1,4 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½
-X
-java:S2094"BRemove this empty class, write its code or make it an "interface".(åì¨«
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½J$8fb95c5b-d140-47b9-b5d4-c81458d94c7a
+~
+java:S2094"BRemove this empty class, write its code or make it an "interface".(åì¨«J$3197caf2-991f-4094-8cd3-85f94f5bc4aa

@@ -1,18 +1,23 @@
 
-•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à¸”¢J$c94fd9ba-504b-48fd-90bc-2255cd45b0ec
-r	java:S106"+Replace this use of System.out by a logger.(î‡ó©ùÿÿÿÿ8öÈ–í1J$e2b98e29-0e96-4183-9d25-90137a78f7e3
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(à¸”¢8–üùí1J$1c583246-9c88-4290-8657-ad534452aeb0
+~	java:S125"<This block of commented-out lines of code should be removed.(¦™íÚ8±Óƒí1J$672e881c-0c07-499b-965b-1553e3b3b243
+r	java:S106$"+Replace this use of System.out by a logger.(î‡ó©ùÿÿÿÿ8›üùí1J$643e0ecd-2a0a-4efe-b847-19ae83815615
 ”
-java:S5998"LRefactor this repetition that can lead to a stack overflow for large inputs.(œÔ†‘øÿÿÿÿ8øÈ–í1J$f92d0cb9-16f7-4607-9a36-fad673b2a8b6
+java:S5998"LRefactor this repetition that can lead to a stack overflow for large inputs.(œÔ†‘øÿÿÿÿ8œüùí1J$3a5cb4e7-dccb-498e-b0d2-4c9e2fd18d32
 ‹
-java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(œÔ†‘øÿÿÿÿ8øÈ–í1J$b221a949-962b-4eab-956e-b76fd0d6d63f
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(œÔ†‘øÿÿÿÿ8üùí1J$1fb0e8ee-af58-40ca-a82e-94a51c3d0851
 ‹
-java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(œÔ†‘øÿÿÿÿ8øÈ–í1J$2c713b48-f206-4b4d-b6fd-f632cb138c56
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(œÔ†‘øÿÿÿÿ8üùí1J$d06a74b1-5cf1-4a0e-812b-04bb91f9099f
 ‹
-java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(üˆ…ƒùÿÿÿÿ8úÈ–í1J$aae1d739-5318-45a6-9120-fd13e3382ad6
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(üˆ…ƒùÿÿÿÿ8üùí1J$7250ca09-2ce8-456f-ab7a-57b90b69683b
 †
-java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8ûÈ–í1J$cdcd4b3c-d60f-4bb6-b9ea-13bcbd8d0dd8
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8üùí1J$e5c6e050-2d84-4bdc-ae26-bb59beb94362
 †
-java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8ûÈ–í1J$39ac3dac-e35a-494f-92ff-0eddcd773f9f
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8üùí1J$906e30fa-602f-486f-bb70-19954808756e
 †
-java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8ûÈ–í1J$0de99e86-4e49-4137-8972-fa54437ac67f
-r	java:S1060"+Replace this use of System.out by a logger.(¢£›»üÿÿÿÿ8üÈ–í1J$16321a8a-b12c-4256-a3cd-72ca42c7251a
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(Ö¿Ó‡8üùí1J$34360082-b136-4a8e-89a8-ec0bd877bf1e
+†
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(¦™íÚ8üùí1J$bc26aa21-315f-4b4f-a3ea-7490ce5af82f
+†
+java:S6353"CUse concise character class syntax '\\w' instead of '[a-zA-Z0-9_]'.(¦™íÚ8üùí1J$73afaf49-babd-4f99-9f46-65525a2c98b7
+r	java:S1069"+Replace this use of System.out by a logger.(¢£›»üÿÿÿÿ8Ÿüùí1J$a0296cb7-7836-4a08-9ad1-9c73a01ddf7a
