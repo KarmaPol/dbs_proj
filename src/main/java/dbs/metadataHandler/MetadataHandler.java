@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import dbs.metadataHandler.vo.AttributeMetadataVO;
 import dbs.metadataHandler.vo.TableMetadataVO;
@@ -69,17 +70,20 @@ public class MetadataHandler {
 	}
 
 	public static void insertColumnMetadata(List<AttributeMetadataVO> vos) throws SQLException {
-		String insertSql = "INSERT INTO column_metadata (column_name, data_type, column_size, table_name) VALUES (?, ?, ?, ?)";
+		String insertSql = "INSERT INTO column_metadata (column_name, data_type, column_size, table_name, column_idx) VALUES (?, ?, ?, ?, ?)";
 
 		try (Connection conn = DriverManager.getConnection(url, user, password)) {
 			try (PreparedStatement pstmt = conn.prepareStatement(insertSql)) {
 				// VO(Value Object) 리스트를 반복 처리
+				AtomicInteger idx = new AtomicInteger(0);
 				vos.forEach(vo -> {
 					try {
 						pstmt.setString(1, vo.name());
 						pstmt.setString(2, vo.type());
 						pstmt.setInt(3, vo.size());
 						pstmt.setString(4, vo.tableName());
+						pstmt.setInt(5, idx.get());
+						idx.getAndIncrement();
 
 						// 배치에 현재 설정된 파라미터를 추가
 						pstmt.addBatch();
