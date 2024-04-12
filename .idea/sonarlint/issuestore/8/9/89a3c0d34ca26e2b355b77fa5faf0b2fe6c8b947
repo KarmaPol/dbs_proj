@@ -1,5 +1,5 @@
 
-‡	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8•Ç±Îè1J$6e1a37e5-7f32-4446-8bd2-61d58106a214
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8˜Ç±Îè1J$a201ff1d-e35f-4836-bc08-3aa7c8a0239f
-r	java:S1067"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8 Ç±Îè1J$33361253-801c-4a4b-b6a9-0dc321e1af63
-‰	java:S899="BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8¡Ç±Îè1J$3a420aa9-a467-4d1e-bd82-b2b8d10cb27f
+‡	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8•Ç±Îè1J$14285116-475d-4d5e-9ced-68774cfdf1ee
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8˜Ç±Îè1J$2de2f71c-c6b8-4f74-a76a-ce9a72fb12ee
+r	java:S1067"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8 Ç±Îè1J$70db2d2f-9a49-4029-bc2a-809b50ad0aac
+‰	java:S899="BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8¡Ç±Îè1J$09d15aeb-b19b-4a1e-ae00-d9c629e86d01

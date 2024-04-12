@@ -61,3 +61,11 @@ a
 1src/main/java/dbs/sqlExecutor/DeleteExecutor.java,d/9/d98913f4ecb069521723161fb6cce6ac8cb87130
 ?
 settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
+k
+;src/main/java/dbs/sqlExecutor/fileManager/RecordWriter.java,1/1/1158f7b65438be1cd4005e23e2c4b67f95339edc
+k
+;src/main/java/dbs/sqlExecutor/fileManager/RecordReader.java,7/e/7e7d0d56752cd93360c7693bfcaebf0c0dd4c14f
+_
+/src/main/java/dbs/fileManager/RecordWriter.java,a/6/a64d92eaf7f0e664c879280eb003dc27cc58f4ed
+_
+/src/main/java/dbs/fileManager/RecordReader.java,9/6/96cf12d402be8ccb96b71a41575584f6316096e6

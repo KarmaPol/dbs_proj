@@ -8,8 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import net.sf.jsqlparser.statement.create.table.CreateTable;
 
-import dbs.metadataHandler.MetadataHandler;
-import dbs.metadataHandler.vo.AttributeMetadataVO;
+import dbs.metadataManager.MetadataHandler;
+import dbs.metadataManager.vo.AttributeMetadataVO;
 
 public class TableCreator {
 	private File file;

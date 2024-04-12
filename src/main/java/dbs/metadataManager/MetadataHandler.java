@@ -1,4 +1,4 @@
-package dbs.metadataHandler;
+package dbs.metadataManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import dbs.metadataHandler.vo.AttributeMetadataVO;
-import dbs.metadataHandler.vo.TableMetadataVO;
+import dbs.metadataManager.vo.AttributeMetadataVO;
+import dbs.metadataManager.vo.TableMetadataVO;
 
 public class MetadataHandler {
 	private static final String url = "jdbc:mysql://localhost:3307/metadata_db"; // yourDatabaseName을 데이터베이스 이름으로 변경하세요.

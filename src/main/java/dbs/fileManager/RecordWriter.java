@@ -1,9 +1,9 @@
-package dbs.sqlExecutor.recordUtil;
+package dbs.fileManager;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-import dbs.metadataHandler.vo.TableMetadataVO;
+import dbs.metadataManager.vo.TableMetadataVO;
 
 public class RecordWriter {
 	public static void writeRecord(String record, TableMetadataVO tableMetadataVO) {

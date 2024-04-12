@@ -1,11 +1,11 @@
-package dbs.sqlExecutor.recordUtil;
+package dbs.fileManager;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dbs.metadataHandler.vo.TableMetadataVO;
+import dbs.metadataManager.vo.TableMetadataVO;
 
 public class RecordReader {
 	private static final int BLOCK_FACTOR = 3;

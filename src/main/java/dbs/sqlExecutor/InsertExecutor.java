@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 
 import net.sf.jsqlparser.statement.insert.Insert;
 
-import dbs.metadataHandler.MetadataHandler;
-import dbs.metadataHandler.vo.AttributeMetadataVO;
-import dbs.metadataHandler.vo.TableMetadataVO;
-import dbs.sqlExecutor.recordUtil.RecordWriter;
+import dbs.metadataManager.MetadataHandler;
+import dbs.metadataManager.vo.AttributeMetadataVO;
+import dbs.metadataManager.vo.TableMetadataVO;
+import dbs.fileManager.RecordWriter;
 
 public class InsertExecutor {
 	public void insertRecord(Insert sql) {
