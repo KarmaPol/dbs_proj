@@ -1,22 +1,36 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8ƒçğîü1J$0ce67066-ab26-4d15-81dc-92059cf06c3b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8Ô—àïü1J$20472421-888a-4fa8-9cc3-21e0281fc184
+‚
+java:S1854."?Remove this useless assignment to local variable "joinRecords".(ÉÖá8à—àïü1J$460dad8a-1442-4a27-9498-7ef0d2c0aa7f
 |
-java:S1854"9Remove this useless assignment to local variable "right".(ŞÏÎ»8Íüñîü1J$731887e1-3164-47c7-8709-e7a6b426fa0a
-€
-java:S1854"8Remove this useless assignment to local variable "left".(‡¢…Éúÿÿÿÿ8€¾òîü1J$e2412138-bfd2-4ddf-8ff6-42193a2ec5b2
+java:S1854+"9Remove this useless assignment to local variable "right".(ŞÏÎ»8à—àïü1J$177fd9d4-abcb-4730-b4ca-7a38cb9f469f
 ˆ
-java:S1854"@Remove this useless assignment to local variable "onExpression".(äâÃÉüÿÿÿÿ8çğîü1J$fe1c8914-4512-4ab3-a732-101cd61cfb4e
-’
-java:S6201"OReplace this instanceof check and cast with 'instanceof Select selectStatement'(¥òª8çğîü1J$cf06e249-5972-48e3-9997-20e36fd16b72
+java:S1854&"@Remove this useless assignment to local variable "onExpression".(äâÃÉüÿÿÿÿ8à—àïü1J$3d3ffe33-a58b-4a02-9c23-86602c709d48
 }
-java:S1874"5Remove this use of "getSelectBody"; it is deprecated.(Úƒ©îøÿÿÿÿ8çğîü1J$ffc837d8-2ee1-4754-9bcf-7cfc09b8d4c7
-r	java:S106"+Replace this use of System.out by a logger.(ïŠ­Ÿıÿÿÿÿ8çğîü1J$b0466758-d9b1-4eb2-844f-fe804007f682
+java:S1874#"5Remove this use of "getSelectBody"; it is deprecated.(Úƒ©îøÿÿÿÿ8á—àïü1J$440879e5-aad8-4297-949f-421441aeeae8
 
-java:S1874"7Remove this use of "getOnExpression"; it is deprecated.(äâÃÉüÿÿÿÿ8‘çğîü1J$fe58dbd8-9d06-4605-b6db-94f64ebf558b
+java:S1874&"7Remove this use of "getOnExpression"; it is deprecated.(äâÃÉüÿÿÿÿ8á—àïü1J$c0931163-a75a-4c60-accf-ccadc6dab262
 y
-java:S1481"1Remove this unused "onExpression" local variable.(äâÃÉüÿÿÿÿ8‘çğîü1J$e5928d5d-4437-4e11-94d4-16dbae03a56f
-m	java:S106"+Replace this use of System.out by a logger.(şşÿ¬8‘çğîü1J$871afa95-6f47-4d9a-83b4-8f57dc25434c
-q
-java:S1481")Remove this unused "left" local variable.(‡¢…Éúÿÿÿÿ8ƒ¾òîü1J$7b5ef626-d8bc-470a-bfff-014e9d34028b
+java:S1481&"1Remove this unused "onExpression" local variable.(äâÃÉüÿÿÿÿ8á—àïü1J$242b6794-b907-4efe-888d-fa0fc4cb04a0
 m
-java:S1481"*Remove this unused "right" local variable.(ŞÏÎ»8Ğüñîü1J$0d3ddc32-3219-407c-b2ab-9599a34f61dd
+java:S1481+"*Remove this unused "right" local variable.(ŞÏÎ»8â—àïü1J$4650b543-69e8-4754-8bbe-9c2eeee3490f
+s
+java:S1481."0Remove this unused "joinRecords" local variable.(ÉÖá8â—àïü1J$62f3cc4e-a00e-454b-9d7e-485c25f14015
+…
+java:S18546"=Remove this useless assignment to local variable "columnIdx".(Ï»òÒúÿÿÿÿ8Ñî†ñü1J$d92e350f-e062-4354-ab15-63833ce9924b
+
+java:S1854U">Remove this useless assignment to local variable "columnType".(¶Ş£­8ÜÑ”ñü1J$565b5d55-6390-4a1f-be84-81d4869f0b28
+v
+java:S14816".Remove this unused "columnIdx" local variable.(Ï»òÒúÿÿÿÿ8Ôî†ñü1J$f0311fcf-e505-416c-931c-b14bfc1c0d1e
+}
+java:S6213?":Rename this variable to not match a restricted identifier.(éôû8ŞÑ”ñü1J$d1c89581-125d-485e-a87b-2dab3afc9f1f
+r
+java:S1481U"/Remove this unused "columnType" local variable.(¶Ş£­8ßÑ”ñü1J$22ab3c2e-9090-4a1a-8a48-6794fe4edfbb
+r	java:S106i"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8áÑ”ñü1J$689f7a1e-1a8c-4568-a0ea-84b6d1d737c2
+‰	java:S899o"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8áÑ”ñü1J$bc7a298e-2170-46b4-9c41-14a70e39957d
+•
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8âÑ”ñü1J$73179d17-817a-428f-90d4-e3f07e201435
+ƒ
+java:S6213„":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8âÑ”ñü1J$532a2b56-61c7-42b7-831e-981f9ae3b840
+~
+java:S6213–":Rename this variable to not match a restricted identifier.(—ÓÉ‘8ãÑ”ñü1J$e07123b1-ee39-4198-b672-d09c026b948f
