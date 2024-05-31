@@ -1,36 +1,41 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8Ô—àïü1J$20472421-888a-4fa8-9cc3-21e0281fc184
-‚
-java:S1854."?Remove this useless assignment to local variable "joinRecords".(ÉÖá8à—àïü1J$460dad8a-1442-4a27-9498-7ef0d2c0aa7f
-|
-java:S1854+"9Remove this useless assignment to local variable "right".(ŞÏÎ»8à—àïü1J$177fd9d4-abcb-4730-b4ca-7a38cb9f469f
+¤
+java:S1488ì"[Immediately return this expression instead of assigning it to the temporary variable "mod".(úÀ£öşÿÿÿÿ8úÆ™õü1J$fd9553ac-f8d9-4623-92b3-d811b248ec13
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8ÿÆ™õü1J$0a69315e-c277-4a8e-987b-ee0abbf30585
 ˆ
-java:S1854&"@Remove this useless assignment to local variable "onExpression".(äâÃÉüÿÿÿÿ8à—àïü1J$3d3ffe33-a58b-4a02-9c23-86602c709d48
+java:S1854("@Remove this useless assignment to local variable "onExpression".(äâÃÉüÿÿÿÿ8ğÇ™õü1J$7eb9fed4-e962-4412-8606-61dabc6fbfdf
 }
-java:S1874#"5Remove this use of "getSelectBody"; it is deprecated.(Úƒ©îøÿÿÿÿ8á—àïü1J$440879e5-aad8-4297-949f-421441aeeae8
+java:S1874%"5Remove this use of "getSelectBody"; it is deprecated.(Úƒ©îøÿÿÿÿ8ñÇ™õü1J$dbe7d0d7-f226-4024-9ad8-b4123f52d5e2
 
-java:S1874&"7Remove this use of "getOnExpression"; it is deprecated.(äâÃÉüÿÿÿÿ8á—àïü1J$c0931163-a75a-4c60-accf-ccadc6dab262
+java:S1874("7Remove this use of "getOnExpression"; it is deprecated.(äâÃÉüÿÿÿÿ8ñÇ™õü1J$b32a0863-77c3-416f-8cd1-89976a8c1d24
 y
-java:S1481&"1Remove this unused "onExpression" local variable.(äâÃÉüÿÿÿÿ8á—àïü1J$242b6794-b907-4efe-888d-fa0fc4cb04a0
-m
-java:S1481+"*Remove this unused "right" local variable.(ŞÏÎ»8â—àïü1J$4650b543-69e8-4754-8bbe-9c2eeee3490f
-s
-java:S1481."0Remove this unused "joinRecords" local variable.(ÉÖá8â—àïü1J$62f3cc4e-a00e-454b-9d7e-485c25f14015
-…
-java:S18546"=Remove this useless assignment to local variable "columnIdx".(Ï»òÒúÿÿÿÿ8Ñî†ñü1J$d92e350f-e062-4354-ab15-63833ce9924b
-
-java:S1854U">Remove this useless assignment to local variable "columnType".(¶Ş£­8ÜÑ”ñü1J$565b5d55-6390-4a1f-be84-81d4869f0b28
-v
-java:S14816".Remove this unused "columnIdx" local variable.(Ï»òÒúÿÿÿÿ8Ôî†ñü1J$f0311fcf-e505-416c-931c-b14bfc1c0d1e
+java:S1481("1Remove this unused "onExpression" local variable.(äâÃÉüÿÿÿÿ8òÇ™õü1J$769c2cab-9154-4b43-9748-795f5bacc0cc
 }
-java:S6213?":Rename this variable to not match a restricted identifier.(éôû8ŞÑ”ñü1J$d1c89581-125d-485e-a87b-2dab3afc9f1f
-r
-java:S1481U"/Remove this unused "columnType" local variable.(¶Ş£­8ßÑ”ñü1J$22ab3c2e-9090-4a1a-8a48-6794fe4edfbb
-r	java:S106i"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8áÑ”ñü1J$689f7a1e-1a8c-4568-a0ea-84b6d1d737c2
-‰	java:S899o"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8áÑ”ñü1J$bc7a298e-2170-46b4-9c41-14a70e39957d
+java:S6213M":Rename this variable to not match a restricted identifier.(Ø¢öã8õÇ™õü1J$c3bb134f-7ede-42a4-bf53-e140153435fc
+š
+java:S3776X"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(ÂÂÒÃşÿÿÿÿ8öÇ™õü1J$a5a0076a-caea-468b-b8b0-2f0f3dba4cd5
 •
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8âÑ”ñü1J$73179d17-817a-428f-90d4-e3f07e201435
+java:S6204d"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8÷Ç™õü1J$125184b4-3f70-4fea-aae1-4d64107abe82
+•
+java:S6204g"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8†È™õü1J$9d6e6376-3386-409d-8f54-f3e8383b2508
+‚
+java:S6213p":Rename this variable to not match a restricted identifier.(ÌÉæùÿÿÿÿ8ùÇ™õü1J$02b7e486-34dc-4f59-9cf5-c9236238c84a
 ƒ
-java:S6213„":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8âÑ”ñü1J$532a2b56-61c7-42b7-831e-981f9ae3b840
+java:S6213‚":Rename this variable to not match a restricted identifier.(Û¿Ñ¦øÿÿÿÿ8ûÇ™õü1J$3c4b1eb7-2974-4187-8388-ffad08557d5c
+ƒ
+java:S6213¬":Rename this variable to not match a restricted identifier.(ÇØÁÚüÿÿÿÿ8„È™õü1J$56cdeac8-c3c3-48a3-8d76-cae361f42eff
+s	java:S106­"+Replace this use of System.out by a logger.(ıãÃ¥ÿÿÿÿÿ8üÇ™õü1J$cbff8603-5238-44d2-8e68-cfc729ad44bb
+‚
+java:S1854Ó">Remove this useless assignment to local variable "columnType".(¶Ş£­8şÇ™õü1J$93f97143-a480-4e43-829b-0a5eef66a65a
+Š	java:S899º"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8„È™õü1J$c5e7cd39-e782-4ec1-8b9c-6cdfa59e5c0a
 ~
-java:S6213–":Rename this variable to not match a restricted identifier.(—ÓÉ‘8ãÑ”ñü1J$e07123b1-ee39-4198-b672-d09c026b948f
+java:S6213¾":Rename this variable to not match a restricted identifier.(éôû8‡È™õü1J$f5c3e9bb-c1ad-4154-99e7-1bf8df599b72
+s
+java:S1481Ó"/Remove this unused "columnType" local variable.(¶Ş£­8…È™õü1J$e1a68c65-5168-4269-9a2b-74ff9bd063d5
+s	java:S106å"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8…È™õü1J$8f0be232-60aa-4e2d-a309-6626e599da92
+–
+java:S6204÷"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8›º¤õü1J$6fe1a1ee-b068-4397-99a7-e36c07e36d8c
+ƒ
+java:S6213ü":Rename this variable to not match a restricted identifier.(ÜÙôùÿÿÿÿ8‡È™õü1J$5cb95f26-a6e1-4656-b655-98ffd1fe47ed
+~
+java:S6213":Rename this variable to not match a restricted identifier.(—ÓÉ‘8¦’ õü1J$edd9481b-124c-4f86-ad05-af47143ebb76

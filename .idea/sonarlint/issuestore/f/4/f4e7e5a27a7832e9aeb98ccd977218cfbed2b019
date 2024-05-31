@@ -1,16 +1,16 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8ÍàÏè1J$30f54a29-7c74-47f4-ab20-e3ef46d49b5b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8ÍàÏè1J$061ccca8-1359-4d77-beda-33dc6ab12a19
 
-java:S1854(">Remove this useless assignment to local variable "columnType".(¶Ş£­8‚àÏè1J$5ee8b4da-9cb2-4bba-b747-16fc5e5f5fc2
+java:S1854(">Remove this useless assignment to local variable "columnType".(¶Ş£­8‚àÏè1J$d7ac365b-803b-4188-9e2a-38a639f006fc
 •
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(œçÖß8ƒàÏè1J$546f28b6-82ef-4c9f-81fb-bbfaeae1ec39
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(œçÖß8ƒàÏè1J$88c84741-714b-47b3-bc85-283391e7f042
 ›
-java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(İõÀßùÿÿÿÿ8ƒàÏè1J$3f8f6193-cc4b-423a-ba88-c6bd97c69015
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(İõÀßùÿÿÿÿ8ƒàÏè1J$f4308956-4698-405b-8be7-973d51b70216
 Š
-java:S1612"BReplace this lambda with method reference 'Column::getColumnName'.(İõÀßùÿÿÿÿ8ƒàÏè1J$48d92ef6-c9be-4019-b4fa-3a04d2f8a425
+java:S1612"BReplace this lambda with method reference 'Column::getColumnName'.(İõÀßùÿÿÿÿ8ƒàÏè1J$0204983c-bd98-45a1-a2dc-9febb103ea5e
 •
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8„àÏè1J$65f5efe6-b3e6-4dac-84b5-9c375f7b0b21
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8„àÏè1J$502b0326-1fd5-4ed8-9e4b-c3bb6faf506e
 …
-java:S1612"=Replace this lambda with method reference 'Object::toString'.(Ó£şÿÿÿÿ8„àÏè1J$c6e5e831-700e-42cc-99d8-848e58a04858
+java:S1612"=Replace this lambda with method reference 'Object::toString'.(Ó£şÿÿÿÿ8„àÏè1J$480674e3-5c1f-4e2f-ad53-81ea3ea780c0
 r
-java:S1481("/Remove this unused "columnType" local variable.(¶Ş£­8…àÏè1J$e6023d0e-766d-462c-89ba-3d57f6243877
+java:S1481("/Remove this unused "columnType" local variable.(¶Ş£­8…àÏè1J$5d9f4c1d-fde9-4756-848f-5650926ad0e7

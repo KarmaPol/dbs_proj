@@ -1,5 +1,7 @@
 
-‡	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8•Ç±Îè1J$9879b989-bff1-4e25-928a-0b014d664e4d
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8˜Ç±Îè1J$0afe3f1e-0d8d-41e8-92e8-3710d807d6fd
-r	java:S1067"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8 Ç±Îè1J$8f9dfa89-2143-40db-ac26-ca11db4f6c6e
-‰	java:S899="BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8¡Ç±Îè1J$c884cd7e-02f2-43af-b845-33af5dbc3185
+‡	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(ÅÙî8•Ç±Îè1J$43b9fb22-4086-4731-8506-3e00f77e3971
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8˜Ç±Îè1J$88be73dd-7214-4295-affe-3be0c351689f
+›
+java:S1450"YRemove the "recordSize" field and declare it as a local variable in the relevant methods.(ØÄç98Ğ­şôü1J$2e4ecef2-ede4-411c-85e6-a3c702a2591c
+r	java:S1068"+Replace this use of System.out by a logger.(·µ­‘ùÿÿÿÿ8 Ç±Îè1J$2a5cb503-4c97-4ef7-94c2-6368f6df6a1f
+‰	java:S899>"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8¡Ç±Îè1J$47867c7c-6099-491c-94ee-2a02ac4cf956

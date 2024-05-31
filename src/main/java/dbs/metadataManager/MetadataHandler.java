@@ -25,7 +25,7 @@ public class MetadataHandler {
 			try (Statement stmt = conn.createStatement()) {
 
 				String dropTableSql = "DROP TABLE IF EXISTS table_metadata;";
-				stmt.executeUpdate(dropTableSql);
+				// stmt.executeUpdate(dropTableSql);
 
 				// 테이블 생성 SQL 쿼리
 				String createTableSql = "CREATE TABLE IF NOT EXISTS table_metadata (" +
@@ -60,7 +60,7 @@ public class MetadataHandler {
 
 		try (Connection conn = DriverManager.getConnection(url, user, password);
 			 Statement stmt = conn.createStatement()) {
-			stmt.executeUpdate(dropTableSql);
+			// stmt.executeUpdate(dropTableSql);
 
 			stmt.executeUpdate(createTableSql);
 			System.out.println("column_metadata 테이블이 성공적으로 생성되었습니다.");

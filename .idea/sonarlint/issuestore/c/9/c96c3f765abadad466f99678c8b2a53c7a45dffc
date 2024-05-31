@@ -1,22 +1,28 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Êë»Ñ8£ ‡í1J$9b841002-c8e7-45ab-8fa2-ba455136290c
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿€ÅŸúÿÿÿÿ8¯ ‡í1J$732aa5bc-bfec-43e1-a6d6-4f9d1f34dfaa
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıëİúÿÿÿÿ8¯ ‡í1J$383be041-61b0-44e6-b5d4-1d1a4ddd8d0e
-¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÍÍÿÿÿÿÿ8¯ ‡í1J$e69ef399-b5c2-403c-a658-c3d2dd4ed439
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Êë»Ñ8£ ‡í1J$59ca1ced-aaee-4641-890f-0cc6b0c6c04d
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿€ÅŸúÿÿÿÿ8¯ ‡í1J$06dd6e2a-6010-4adc-8b88-97d9a9363a26
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıëİúÿÿÿÿ8¯ ‡í1J$2f63c9c2-18cc-461e-8451-ddcd984fec5b
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÍÍÿÿÿÿÿ8¯ ‡í1J$b39f1f7d-9da0-4d13-8cf4-de059fa1a839
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(ÔŠÀ“úÿÿÿÿ8± ‡í1J$a7ae1fa3-eae4-4e14-9dc3-5fba68967dff
+java:S1118":Add a private constructor to hide the implicit public one.(ÔŠÀ“úÿÿÿÿ8± ‡í1J$597c6914-81f8-457c-b2ae-d86dfe18e923
 ~
-java:S6437"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8´ ‡í1J$0f1b2805-27c1-48b8-9cac-f1c6a69ff042
-r	java:S106%"+Replace this use of System.out by a logger.(õ½¾şûÿÿÿÿ8µ ‡í1J$43643a13-f2c9-4d8e-8d7f-1bf1da31715b
-r	java:S106*"+Replace this use of System.out by a logger.(å¾”âşÿÿÿÿ8µ ‡í1J$5f99db89-b49f-445f-b545-a22929df8351
+java:S6437"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8´ ‡í1J$e2a1d5ec-899c-4ded-8d8e-4161b559f20e
+t
+java:S1481"1Remove this unused "dropTableSql" local variable.(òòËØ8ï‹Ãôü1J$1fb735cf-9bc5-43a2-9e95-69cc5b1cc5be
+~	java:S125"<This block of commented-out lines of code should be removed.(Êû¯ó8ï‹Ãôü1J$e6d16386-30ca-4a52-8d87-cb990f986dd0
+r	java:S106%"+Replace this use of System.out by a logger.(õ½¾şûÿÿÿÿ8µ ‡í1J$27b8e224-2d29-44ba-ab22-c8e22d9637a5
+r	java:S106*"+Replace this use of System.out by a logger.(å¾”âşÿÿÿÿ8µ ‡í1J$b144945f-022f-41a4-9fcb-a923246ac650
+y
+java:S14812"1Remove this unused "dropTableSql" local variable.(—ÿšÉÿÿÿÿÿ8—×Éôü1J$7fa21086-499f-404b-bbde-1add00e4bd95
 ~
-java:S6437="6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8¶ ‡í1J$f701ec8c-a85c-4ee7-b414-544592cdbef7
-m	java:S106B"+Replace this use of System.out by a logger.(Ÿ‡’¼8¶ ‡í1J$ca893452-4e82-46e9-bc1f-f2c3f85cb7a6
+java:S6437="6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8¶ ‡í1J$9bead0d5-b059-435f-a8e5-3865095d92d6
+~	java:S125?"<This block of commented-out lines of code should be removed.(Êû¯ó8—×Éôü1J$cd5120ec-3a9e-4731-965f-9a0f82601a87
+m	java:S106B"+Replace this use of System.out by a logger.(Ÿ‡’¼8¶ ‡í1J$3e280a4b-9e02-4231-94f7-8383b3ec3095
 ~
-java:S6437K"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¾ ‡í1J$c84a0787-668a-4568-8dcc-d321420eb374
+java:S6437K"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¾ ‡í1J$3f23832c-dd4c-489d-af6e-1be6c0362548
 ~
-java:S6437h"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8Â ‡í1J$a114e762-a5b5-4af5-bd77-1a699da8e65e
+java:S6437h"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8Â ‡í1J$43518c05-58ae-4a17-9e66-53707dd8b0b0
 z
-java:S1481~"7Remove this unused "attributeMetadatas" local variable.(Î¨ç»8Æ ‡í1J$6657bb51-d3f7-498d-a94f-50591c9f89bd
+java:S1481~"7Remove this unused "attributeMetadatas" local variable.(Î¨ç»8Æ ‡í1J$afb639d6-5b0c-4dad-a19e-48d65a94b75f
 
-java:S6437"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8È ‡í1J$b0ee5657-2c90-4978-baac-d97eb897d138
+java:S6437"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8È ‡í1J$0f5c1957-33bd-4366-a79f-84b4913a1fb4

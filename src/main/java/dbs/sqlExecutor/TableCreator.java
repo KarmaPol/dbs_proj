@@ -16,6 +16,7 @@ public class TableCreator {
 	private int recordSize = 0;
 
 	public void createFile(CreateTable sql) {
+		recordSize = 0;
 		String tableName = sql.getTable().getName();
 		AtomicInteger columnIdx = new AtomicInteger();
 		try {

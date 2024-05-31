@@ -2,6 +2,7 @@ package dbs.sqlExecutor;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,8 +12,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+import java.util.zip.CRC32;
 
 import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.operators.relational.EqualsTo;
@@ -22,13 +23,14 @@ import net.sf.jsqlparser.statement.select.PlainSelect;
 import net.sf.jsqlparser.statement.select.Select;
 
 import dbs.fileManager.RecordReader;
-import dbs.fileManager.RecordWriter;
 import dbs.metadataManager.MetadataHandler;
 import dbs.metadataManager.vo.AttributeMetadataVO;
 import dbs.metadataManager.vo.TableMetadataVO;
 
 public class JoinExecutor {
-	private static final int MODULUS = 3;
+	private static final Integer MODULUS = 3;
+	private static final Integer JOIN_MODULUS = 4;
+	private static final int BLOCK_FACTOR = 3;
 
 	public void joinRecords(Statement input) {
 		Select selectStatement = (Select)input;
@@ -46,30 +48,154 @@ public class JoinExecutor {
 		List<Map<String, String>> joinRecords = readTables(joinTable);
 
 		createPartitionFile(fromRecords, left, fromTable);
+		createPartitionFile(joinRecords, right, joinTable);
+
+		joinPartitionFiles(fromTable, joinTable, left, right);
+
 	}
+
+	private static List<String> splitStringBySize(String str, int size) {
+		List<String> result = new ArrayList<>();
+		for (int start = 0; start < str.length(); start += size) {
+			int end = Math.min(start + size, str.length());
+			result.add(str.substring(start, end));
+		}
+		return result;
+	}
+
+	public static List<String> readPartitionFile(TableMetadataVO tableMetadataVO, int partitionNumber) {
+		String fileName = tableMetadataVO.name();
+		int recordSize = tableMetadataVO.recordSize();
+		String filePath = fileName + "_partition_" + partitionNumber + ".txt";
+
+		List<String> records = new ArrayList<>();
+		try (FileReader fileReader = new FileReader(filePath)) {
+			char[] characters = new char[recordSize* BLOCK_FACTOR];
+			int numCharsRead;
+
+			while ((numCharsRead = fileReader.read(characters)) != -1) {
+				String record = new String(characters, 0, numCharsRead);
+				List<String> splitedRecords = splitStringBySize(record, recordSize);
+				records.addAll(splitedRecords);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return records;
+	}
+
+	private void joinPartitionFiles(String fromTable, String joinTable, String left, String right) {
+		TableMetadataVO fromTableMetaData = MetadataHandler.getTableMetaData(fromTable);
+		TableMetadataVO joinTableMetaData = MetadataHandler.getTableMetaData(joinTable);
+
+		Map<String, AttributeMetadataVO> fromAttributeMetadataVOMap = MetadataHandler.getAttributeMetadata(fromTableMetaData.name());
+		List<AttributeMetadataVO> fromAttributeMetadatas = fromAttributeMetadataVOMap.values().stream().toList();
+
+		Map<String, AttributeMetadataVO> joinAttributeMetadataVOMap = MetadataHandler.getAttributeMetadata(joinTableMetaData.name());
+		List<AttributeMetadataVO> joinAttributeMetadatas = joinAttributeMetadataVOMap.values().stream().toList();
+
+		List<AttributeMetadataVO> fromSortedAttributeMetadatas = fromAttributeMetadatas.stream()
+			.sorted(Comparator.comparingInt(AttributeMetadataVO::columnIdx))
+			.collect(Collectors.toList());
+		List<AttributeMetadataVO> joinSortedAttributeMetadatas = joinAttributeMetadatas.stream()
+			.sorted(Comparator.comparingInt(AttributeMetadataVO::columnIdx))
+			.collect(Collectors.toList());
+
+		for(int i = 0; i < MODULUS; i++) {
+			List<String> fromPartitionRecords = readPartitionFile(fromTableMetaData, i);
+			List<String> joinPartitionRecords = readPartitionFile(joinTableMetaData, i);
+
+			HashMap<Integer, HashMap<String, String>> fromHashIndex = new HashMap<>();
+			HashMap<Integer, HashMap<String, String>> joinHashIndex = new HashMap<>();
+
+			for(String record : fromPartitionRecords) {
+				if(isDeleted(record)) {
+					continue;
+				}
+
+				int idx = 0;
+				HashMap<String, String> temp = new HashMap<>();
+				for (AttributeMetadataVO attributeMetadata : fromSortedAttributeMetadatas) {
+					int size = attributeMetadata.size();
+					String substring = record.substring(idx, idx + size);
+					substring = removeNullChars(substring);
+					idx += size;
+					temp.put(attributeMetadata.name(), substring);
+				}
+				Integer modValue = Math.abs(getModValue(temp.get(left), JOIN_MODULUS));
+				fromHashIndex.put(modValue, temp);
+			}
+
+			for(String record : joinPartitionRecords) {
+				if(isDeleted(record)) {
+					continue;
+				}
+
+				int idx = 0;
+				HashMap<String, String> temp = new HashMap<>();
+				for (AttributeMetadataVO attributeMetadata : joinSortedAttributeMetadatas) {
+					int size = attributeMetadata.size();
+					String substring = record.substring(idx, idx + size);
+					substring = removeNullChars(substring);
+					idx += size;
+					temp.put(attributeMetadata.name(), substring);
+				}
+				Integer modValue = Math.abs(getModValue(temp.get(right), MODULUS));
+				joinHashIndex.put(modValue, temp);
+			}
+
+			List<String> joinedRecords = new ArrayList<>();
+
+			for (Map.Entry<Integer, HashMap<String, String>> fromEntry : fromHashIndex.entrySet()) {
+				Integer modValue = fromEntry.getKey();
+				HashMap<String, String> fromRecord = fromEntry.getValue();
+
+				if (joinHashIndex.containsKey(modValue)) {
+					HashMap<String, String> joinRecord = joinHashIndex.get(modValue);
+					if (fromRecord.get(left).equals(joinRecord.get(left))) {
+						StringBuilder joinedRecord = new StringBuilder();
+						for (String value : fromRecord.values()) {
+							joinedRecord.append(value).append(",");
+						}
+						for (String value : joinRecord.values()) {
+							joinedRecord.append(value).append(",");
+						}
+						// Remove the last comma
+						joinedRecord.setLength(joinedRecord.length() - 1);
+						joinedRecords.add(joinedRecord.toString());
+					}
+				}
+			}
+
+			// Output the joined records
+			for (String record : joinedRecords) {
+				System.out.println(record);
+			}
+		}
+	}
+
 
 	private void createPartitionFile(List<Map<String, String>> records, String key, String tableName) {
 		Map<Integer, BufferedWriter> writers = new HashMap<>();
 		File file;
-		AtomicInteger columnIdx = new AtomicInteger();
 
 		try {
 			for (int i = 0; i < MODULUS; i++) {
 				file = new File(tableName + "_partition_" + i + ".txt");
-				isFileExists(file);
+				file.createNewFile();
 				writers.put(i, new BufferedWriter(new FileWriter(file, true)));
 			}
 
 			for (Map<String, String> record : records) {
 				String keyValue = record.get(key);
-				int modValue = getModValue(keyValue, MODULUS);
+				Integer modValue = Math.abs(getModValue(keyValue, MODULUS));
 
 				BufferedWriter writer = writers.get(modValue);
 
 				List<String> columnNames = new ArrayList<>(record.keySet());
 				List<String> columnValues = new ArrayList<>(record.values());
 
-				TableMetadataVO tableMetaData = MetadataHandler.getTableMetaData(tableName);
 				Map<String, AttributeMetadataVO> attributeMetadataVOMap = MetadataHandler.getAttributeMetadata(tableName);
 
 				List<String> recordList = new ArrayList<>(Collections.nCopies(columnNames.size(), null));
@@ -92,10 +218,8 @@ public class JoinExecutor {
 				}
 
 				String currentRecord = recordMaker.toString();
-				RecordWriter.writeRecord(currentRecord, tableMetaData);
 
 				writer.write(currentRecord);
-				writer.newLine();
 			}
 
 			for (BufferedWriter writer : writers.values()) {
@@ -106,15 +230,11 @@ public class JoinExecutor {
 		}
 	}
 
-	private static void isFileExists(File file) throws IOException {
-		if (!file.exists()) {
-			file.createNewFile();
-		}
-	}
-
 	private static int getModValue(String key, int modulus) {
-		int intValue = Integer.parseInt(key);
-		return intValue % modulus;
+		CRC32 crc32 = new CRC32();
+		crc32.update(key.getBytes());
+		int mod = (int) crc32.getValue() % modulus;
+		return mod;
 	}
 
 	private List<Map<String, String>> readTables(String tableName) {
