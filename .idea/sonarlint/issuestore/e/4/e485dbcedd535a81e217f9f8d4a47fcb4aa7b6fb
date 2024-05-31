@@ -1,0 +1,22 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Æø½8ƒçğîü1J$0ce67066-ab26-4d15-81dc-92059cf06c3b
+|
+java:S1854"9Remove this useless assignment to local variable "right".(ŞÏÎ»8Íüñîü1J$731887e1-3164-47c7-8709-e7a6b426fa0a
+€
+java:S1854"8Remove this useless assignment to local variable "left".(‡¢…Éúÿÿÿÿ8€¾òîü1J$e2412138-bfd2-4ddf-8ff6-42193a2ec5b2
+ˆ
+java:S1854"@Remove this useless assignment to local variable "onExpression".(äâÃÉüÿÿÿÿ8çğîü1J$fe1c8914-4512-4ab3-a732-101cd61cfb4e
+’
+java:S6201"OReplace this instanceof check and cast with 'instanceof Select selectStatement'(¥òª8çğîü1J$cf06e249-5972-48e3-9997-20e36fd16b72
+}
+java:S1874"5Remove this use of "getSelectBody"; it is deprecated.(Úƒ©îøÿÿÿÿ8çğîü1J$ffc837d8-2ee1-4754-9bcf-7cfc09b8d4c7
+r	java:S106"+Replace this use of System.out by a logger.(ïŠ­Ÿıÿÿÿÿ8çğîü1J$b0466758-d9b1-4eb2-844f-fe804007f682
+
+java:S1874"7Remove this use of "getOnExpression"; it is deprecated.(äâÃÉüÿÿÿÿ8‘çğîü1J$fe58dbd8-9d06-4605-b6db-94f64ebf558b
+y
+java:S1481"1Remove this unused "onExpression" local variable.(äâÃÉüÿÿÿÿ8‘çğîü1J$e5928d5d-4437-4e11-94d4-16dbae03a56f
+m	java:S106"+Replace this use of System.out by a logger.(şşÿ¬8‘çğîü1J$871afa95-6f47-4d9a-83b4-8f57dc25434c
+q
+java:S1481")Remove this unused "left" local variable.(‡¢…Éúÿÿÿÿ8ƒ¾òîü1J$7b5ef626-d8bc-470a-bfff-014e9d34028b
+m
+java:S1481"*Remove this unused "right" local variable.(ŞÏÎ»8Ğüñîü1J$0d3ddc32-3219-407c-b2ab-9599a34f61dd

@@ -1,0 +1,22 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Êë»Ñ8£ ‡í1J$9b841002-c8e7-45ab-8fa2-ba455136290c
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿€ÅŸúÿÿÿÿ8¯ ‡í1J$732aa5bc-bfec-43e1-a6d6-4f9d1f34dfaa
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıëİúÿÿÿÿ8¯ ‡í1J$383be041-61b0-44e6-b5d4-1d1a4ddd8d0e
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÍÍÿÿÿÿÿ8¯ ‡í1J$e69ef399-b5c2-403c-a658-c3d2dd4ed439
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(ÔŠÀ“úÿÿÿÿ8± ‡í1J$a7ae1fa3-eae4-4e14-9dc3-5fba68967dff
+~
+java:S6437"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8´ ‡í1J$0f1b2805-27c1-48b8-9cac-f1c6a69ff042
+r	java:S106%"+Replace this use of System.out by a logger.(õ½¾şûÿÿÿÿ8µ ‡í1J$43643a13-f2c9-4d8e-8d7f-1bf1da31715b
+r	java:S106*"+Replace this use of System.out by a logger.(å¾”âşÿÿÿÿ8µ ‡í1J$5f99db89-b49f-445f-b545-a22929df8351
+~
+java:S6437="6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8¶ ‡í1J$f701ec8c-a85c-4ee7-b414-544592cdbef7
+m	java:S106B"+Replace this use of System.out by a logger.(Ÿ‡’¼8¶ ‡í1J$ca893452-4e82-46e9-bc1f-f2c3f85cb7a6
+~
+java:S6437K"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8¾ ‡í1J$c84a0787-668a-4568-8dcc-d321420eb374
+~
+java:S6437h"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8Â ‡í1J$a114e762-a5b5-4af5-bd77-1a699da8e65e
+z
+java:S1481~"7Remove this unused "attributeMetadatas" local variable.(Î¨ç»8Æ ‡í1J$6657bb51-d3f7-498d-a94f-50591c9f89bd
+
+java:S6437"6Revoke and change this password, as it is compromised.(ŞÂ»¹üÿÿÿÿ8È ‡í1J$b0ee5657-2c90-4978-baac-d97eb897d138

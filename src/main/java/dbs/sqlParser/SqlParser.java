@@ -2,6 +2,7 @@ package dbs.sqlParser;
 
 import net.sf.jsqlparser.JSQLParserException;
 import net.sf.jsqlparser.parser.CCJSqlParserUtil;
+import net.sf.jsqlparser.statement.Statement;
 import net.sf.jsqlparser.statement.create.table.CreateTable;
 import net.sf.jsqlparser.statement.delete.Delete;
 import net.sf.jsqlparser.statement.insert.Insert;
@@ -9,6 +10,7 @@ import net.sf.jsqlparser.statement.select.PlainSelect;
 
 import dbs.sqlExecutor.DeleteExecutor;
 import dbs.sqlExecutor.InsertExecutor;
+import dbs.sqlExecutor.JoinExecutor;
 import dbs.sqlExecutor.SelectExecutor;
 import dbs.sqlExecutor.TableCreator;
 
@@ -17,18 +19,22 @@ public class SqlParser {
 	private static final String SELECT_PATTERN = "^SELECT\\s+.+\\s+FROM\\s+[a-zA-Z0-9_]+(\\s+WHERE\\s+.+)?;$"; // SELECT 컬럼명1, 컬럼명2, ... FROM 테이블명 WHERE 조건
 	private static final String INSERT_PATTERN = "^INSERT INTO [a-zA-Z0-9_]+ \\(([a-zA-Z0-9_]+, )*([a-zA-Z0-9_]+)\\) VALUES \\((.+)\\);$"; // INSERT INTO 테이블명 (컬럼명1, 컬럼명2, ...) VALUES (값1, 값2, ...)
 	private static final String DELETE_PATTERN = "^DELETE FROM [a-zA-Z0-9_]+ WHERE [a-zA-Z0-9_]+ = [^;]+;$"; // DELETE FROM 테이블명 WHERE 컬럼명 = 값;
+	private static final String JOIN_PATTERN = "^SELECT\\s+\\*\\s+FROM\\s+[a-zA-Z0-9_]+\\s+JOIN\\s+[a-zA-Z0-9_]+\\s+ON\\s+.+;?$";
 	private static final String EXIT_PATTERN = "EXIT;";
 
 	private final TableCreator tableCreator;
 	private final InsertExecutor insertExecutor;
 	private final SelectExecutor selectExecutor;
 	private final DeleteExecutor deleteExecutor;
+	private final JoinExecutor joinExecutor;
 
-	public SqlParser(TableCreator tableCreator, InsertExecutor insertExecutor, SelectExecutor selectExecutor, DeleteExecutor deleteExecutor) {
+	public SqlParser(TableCreator tableCreator, InsertExecutor insertExecutor,
+		SelectExecutor selectExecutor, DeleteExecutor deleteExecutor, JoinExecutor joinExecutor) {
 		this.tableCreator = tableCreator;
 		this.insertExecutor = insertExecutor;
 		this.selectExecutor = selectExecutor;
 		this.deleteExecutor = deleteExecutor;
+		this.joinExecutor = joinExecutor;
 	}
 
 	public boolean parse(String input) throws JSQLParserException {
@@ -52,6 +58,10 @@ public class SqlParser {
 		else if(input.matches(DELETE_PATTERN)) {
 			Delete sql = (Delete)CCJSqlParserUtil.parse(input);
 			deleteExecutor.deleteRecord(sql);
+		}
+		else if(input.matches(JOIN_PATTERN)) {
+			Statement sql = CCJSqlParserUtil.parse(input);
+			joinExecutor.joinRecords(sql);
 		}
 		else {
 			System.out.println("Invalid query");

@@ -1,11 +1,11 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÖöËèüÿÿÿÿ8‹šØ’í1J$2e1c2019-46bc-41e0-a943-aac89fa22873
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÖöËèüÿÿÿÿ8‹šØ’í1J$965ca2d1-e8f2-4222-8116-d8d5e8aea5a8
 ‚
-java:S1118	":Add a private constructor to hide the implicit public one.(¼àùÃøÿÿÿÿ8‘šØ’í1J$693687d9-02d1-45cb-8091-ff90409f2145
+java:S1118	":Add a private constructor to hide the implicit public one.(¼àùÃøÿÿÿÿ8‘šØ’í1J$f2e72103-4973-458a-9d76-7fe36f44cc2f
 ‚
 java:S6213
-":Rename this variable to not match a restricted identifier.(¦Ø—íÿÿÿÿÿ8‘šØ’í1J$e784332f-2619-40e5-a2be-f59ceaca78f8
-r	java:S106"+Replace this use of System.out by a logger.(ğÔŞ„üÿÿÿÿ8“šØ’í1J$51499ad1-4561-4b03-99b5-b31c388d9f95
-m	java:S106"+Replace this use of System.err by a logger.(Ì›¹Ç8“šØ’í1J$8bfc5cb9-2754-419e-835e-2501e9cca85d
+":Rename this variable to not match a restricted identifier.(¦Ø—íÿÿÿÿÿ8‘šØ’í1J$d7b18632-3699-427f-8321-91e986ae3631
+r	java:S106"+Replace this use of System.out by a logger.(ğÔŞ„üÿÿÿÿ8“šØ’í1J$4ca87a5c-25c6-4160-ac24-e6ccd8ad5849
+m	java:S106"+Replace this use of System.err by a logger.(Ì›¹Ç8“šØ’í1J$6cbd6fbb-b365-4bf6-87c4-11b1823cf2c4
 ‚
-java:S6213":Rename this variable to not match a restricted identifier.(¬ÆÆäşÿÿÿÿ8Åü¹“í1J$7c44e63d-8755-4030-b098-ffb673cc34b5
+java:S6213":Rename this variable to not match a restricted identifier.(¬ÆÆäşÿÿÿÿ8Åü¹“í1J$2755f508-d35e-4bf3-a816-5c1d93fb1eb9

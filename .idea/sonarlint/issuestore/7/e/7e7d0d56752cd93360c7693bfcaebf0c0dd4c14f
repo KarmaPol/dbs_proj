@@ -1,7 +1,0 @@
-
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ï±ˆ›8ÁÆµí1J$58a4f188-5f0e-4f17-9c36-74d6b7c6e99a
-}
-java:S1118
-":Add a private constructor to hide the implicit public one.(Ã¶÷³8ÉÆµí1J$d9ec114f-7915-4af2-9398-75454efbf179
-}
-java:S6213":Rename this variable to not match a restricted identifier.(Ø¢öã8ÌÆµí1J$15f67fb5-a305-4e8c-b1b1-763320913bd9
